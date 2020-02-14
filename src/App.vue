@@ -6,14 +6,19 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Vue from 'vue'
+import { Input } from 'buefy'
+
+import HelloWorld from './components/HelloWorld.vue'
+
+Vue.use(Input)
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
-  }
-};
+    HelloWorld,
+  },
+}
 </script>
 
 <style lang="scss">
