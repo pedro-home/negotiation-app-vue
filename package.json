@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npx vue-cli-service serve",
     "build": "npx vue-cli-service build",
-    "lint:eslint": "npx vue-cli-service lint",
-    "lint:stylelint": "npx vue-cli-service lint:style",
-    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint:js": "npx vue-cli-service lint",
+    "lint:style": "vue-cli-service lint:style",
+    "lint": "npm run lint:js && npm run lint:style",
     "pretest": "npm run lint",
+    "start": "npx vue-cli-service serve",
     "test": "npx vue-cli-service test:unit",
-    "test:watch": "npm run test:unit --watch --notify --notifyMode change"
+    "test:watch": "npm run test --watch --notify --notifyMode change"
   },
   "dependencies": {
     "buefy": "^0.8.10",
@@ -33,6 +33,7 @@
     "npx": "^10.2.2",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "stylelint-config-standard": "^18.2.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
