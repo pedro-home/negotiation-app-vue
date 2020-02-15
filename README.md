@@ -14,6 +14,10 @@ The app is based on the idea of a work contract negotiation: Employer and employ
 - Please add tests to your code.
 - Please include notes how your code and the tests should be run.
 
+## Quick Notes
+
+- The `appid` from _Open Weather Map API_ should be private, since it's considered _personal_ data. To ease the process of running this project locally, it has been added directly to the API url. The correct way would be through _NODE_ environments.
+
 ## Project setup
 
 ```
@@ -43,7 +47,3 @@ npm run lint
 ```
 npm run test
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
