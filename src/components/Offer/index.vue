@@ -1,15 +1,9 @@
 <template>
   <div>
     <b-field>
-      <b-input
-        v-model="inputValue"
-        :placeholder="text"
-        @input="validate"
-      ></b-input>
+      <b-input v-model="inputValue" :placeholder="text" @input="validate"></b-input>
     </b-field>
-    <b-button :disabled="isDisabled" @click="() => onSubmit(inputValue)"
-      >Submit</b-button
-    >
+    <b-button :disabled="isDisabled" @click="() => onSubmit(inputValue)">Submit</b-button>
   </div>
 </template>
 
@@ -29,6 +23,7 @@ export default {
   },
   methods: {
     validate: function() {
+      // Enables submit button according to the input value validation
       this.isDisabled = !this.inputValue.match(VALIDATE_NUMBER_REGEX)
     },
   },

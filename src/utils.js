@@ -1,3 +1,7 @@
+/**
+ * Fetch data from API
+ * @param {string} url
+ */
 export const fetchData = async (url) => {
   return await fetch(url).then((resp) => {
     // Validate response

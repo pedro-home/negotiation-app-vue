@@ -34,10 +34,12 @@ export default {
   },
   methods: {
     saveEmployerOffer(value) {
+      // Clicks on submit button of Employer
       this.valueEmployer = parseFloat(value)
       this.showResult()
     },
     saveEmployeeOffer(value) {
+      // Clicks on submit button of Employee
       this.valueEmployee = parseFloat(value)
       this.showResult()
     },
@@ -53,6 +55,8 @@ export default {
           style: 'currency',
           currency: 'EUR',
         })
+
+        // Create message content for the dialog
         const numberFormatter = new Intl.NumberFormat(navigator.language)
         const message = `Maximum offer was: ${currencyFormatter.format(
           this.valueEmployer
