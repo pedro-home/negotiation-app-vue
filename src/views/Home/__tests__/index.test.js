@@ -53,7 +53,7 @@ describe('Given <Home />', () => {
           beforeEach(async () => {
             tab = wrapper.find('[data-test="employee"]')
             wrapper.find('.tabs li:not(.is-active) > a').trigger('click')
-            Vue.nextTick()
+            await Vue.nextTick()
           })
 
           describe('And submits correct value', () => {
@@ -62,6 +62,12 @@ describe('Given <Home />', () => {
               await Vue.nextTick()
 
               tab.find('button').trigger('click')
+              await Vue.nextTick()
+
+              // Fetch temperature
+              await Vue.nextTick()
+
+              // Show modal
               await Vue.nextTick()
             })
 

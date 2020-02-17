@@ -35,13 +35,13 @@ export default {
   methods: {
     saveEmployerOffer(value) {
       this.valueEmployer = parseFloat(value)
-      this.validateResult()
+      this.showResult()
     },
     saveEmployeeOffer(value) {
       this.valueEmployee = parseFloat(value)
-      this.validateResult()
+      this.showResult()
     },
-    validateResult() {
+    showResult() {
       if (!this.valueEmployer || !this.valueEmployee) {
         // Still waiting for both to answer
         return
