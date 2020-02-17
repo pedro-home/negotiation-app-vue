@@ -2,7 +2,7 @@
 node_modules
 /dist
 
-# local env files
+# Local env files
 .env.local
 .env.*.local
 
@@ -10,6 +10,9 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Report files
+coverage
 
 # Editor directories and files
 .idea
