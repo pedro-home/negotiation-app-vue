@@ -2,15 +2,17 @@
   <b-tabs type="is-toggle" expanded>
     <b-tab-item label="Employer-Tab">
       <Offer
+        data-test="employer"
+        v-if="valueEmployer === null"
         :text="textEmployer"
-        :is-active="valueEmployer === null"
         :on-submit="saveEmployerOffer"
       />
     </b-tab-item>
     <b-tab-item label="Employee-Tab">
       <Offer
+        data-test="employee"
+        v-if="valueEmployee === null"
         :text="textEmployee"
-        :is-active="valueEmployee === null"
         :on-submit="saveEmployeeOffer"
       />
     </b-tab-item>
@@ -18,8 +20,8 @@
 </template>
 
 <script>
-import Offer from '../../components/Offer'
-import { WEATHER_API } from './constants'
+import Offer from '@/components/Offer'
+import { fetchTemperature } from './utils'
 
 export default {
   data: () => {
@@ -46,7 +48,7 @@ export default {
       }
 
       // Fetch temperature from API
-      this.fetchTemperature().then((temperature) => {
+      fetchTemperature().then((temperature) => {
         const message = `Maximum offer was: ${this.valueEmployer}<br>Minimum expected salary was: ${this.valueEmployee}<br>Current temperature: ${temperature} °C`
 
         if (this.valueEmployee <= this.valueEmployer) {
@@ -58,25 +60,6 @@ export default {
         // Show failure dialog
         this.$buefy.dialog.alert({ title: 'Failure!', message })
       })
-    },
-    async fetchTemperature() {
-      let temperature
-      try {
-        temperature = await fetch(WEATHER_API)
-          .then((resp) => {
-            // Validate response
-            if (!resp.ok) {
-              return Promise.reject(new Error(resp.statusText))
-            }
-
-            return resp.json()
-          })
-          .then(({ main: { temp } }) => temp)
-      } catch (e) {
-        temperature = 'Error'
-      }
-
-      return temperature
     },
   },
   components: {

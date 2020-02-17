@@ -1,22 +1,23 @@
 <template>
-  <div v-if="isActive">
+  <div>
     <b-field>
       <b-input
         v-model="inputValue"
-        type="number"
         :placeholder="text"
-        required
-        validation-message="Invalid number"
+        @input="validate"
       ></b-input>
     </b-field>
-    <b-button :disabled="inputValue===''" @click="() => onSubmit(inputValue)">Submit</b-button>
+    <b-button :disabled="isDisabled" @click="() => onSubmit(inputValue)"
+      >Submit</b-button
+    >
   </div>
 </template>
 
 <script>
+import { VALIDATE_NUMBER_REGEX } from './constants'
+
 export default {
   props: {
-    isActive: Boolean,
     text: {
       type: String,
       required: true,
@@ -26,8 +27,14 @@ export default {
       required: true,
     },
   },
+  methods: {
+    validate: function() {
+      this.isDisabled = !this.inputValue.match(VALIDATE_NUMBER_REGEX)
+    },
+  },
   data: () => ({
     inputValue: '',
+    isDisabled: true,
   }),
 }
 </script>
