@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given <App /> When initializes And uses default props Then should match snapshot 1`] = `
+<div
+  id="app"
+>
+  <div
+    class="b-tabs is-fullwidth"
+  >
+    <nav
+      class="tabs is-toggle is-fullwidth"
+    >
+      <ul>
+        <li
+          class="is-active"
+        >
+          <a>
+            <!---->
+             
+            <span>
+              Employer-Tab
+            </span>
+          </a>
+        </li>
+        <li
+          class=""
+        >
+          <a>
+            <!---->
+             
+            <span>
+              Employee-Tab
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+     
+    <section
+      class="tab-content is-transitioning"
+    >
+      <div
+        class="tab-item v-enter v-enter-active"
+        style=""
+      >
+        <div
+          data-test="employer"
+        >
+          <div
+            class="field"
+          >
+            <!---->
+             
+            <div
+              class="control is-clearfix"
+            >
+              <input
+                autocomplete="on"
+                class="input"
+                placeholder="Enter maximum salary"
+                type="text"
+              />
+               
+              <!---->
+               
+              <!---->
+               
+              <!---->
+            </div>
+             
+            <!---->
+          </div>
+           
+          <button
+            class="button"
+            disabled="disabled"
+            type="button"
+          >
+            <!---->
+             
+            <span>
+              Submit
+            </span>
+             
+            <!---->
+          </button>
+        </div>
+      </div>
+       
+      <div
+        class="tab-item"
+        style="display: none;"
+      >
+        <div
+          data-test="employee"
+        >
+          <div
+            class="field"
+          >
+            <!---->
+             
+            <div
+              class="control is-clearfix"
+            >
+              <input
+                autocomplete="on"
+                class="input"
+                placeholder="Enter minimum salary"
+                type="text"
+              />
+               
+              <!---->
+               
+              <!---->
+               
+              <!---->
+            </div>
+             
+            <!---->
+          </div>
+           
+          <button
+            class="button"
+            disabled="disabled"
+            type="button"
+          >
+            <!---->
+             
+            <span>
+              Submit
+            </span>
+             
+            <!---->
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

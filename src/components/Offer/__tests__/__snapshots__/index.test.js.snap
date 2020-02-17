@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given <Offer /> When initializes And uses default props Then should match snapshot 1`] = `
+<div>
+  <div
+    class="field"
+  >
+    <!---->
+     
+    <div
+      class="control is-clearfix"
+    >
+      <input
+        autocomplete="on"
+        class="input"
+        placeholder=""
+        type="text"
+      />
+       
+      <!---->
+       
+      <!---->
+       
+      <!---->
+    </div>
+     
+    <!---->
+  </div>
+   
+  <button
+    class="button"
+    disabled="disabled"
+    type="button"
+  >
+    <!---->
+     
+    <span>
+      Submit
+    </span>
+     
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Given <Offer /> When initializes And uses text prop Then should match snapshot 1`] = `
+<div>
+  <div
+    class="field"
+  >
+    <!---->
+     
+    <div
+      class="control is-clearfix"
+    >
+      <input
+        autocomplete="on"
+        class="input"
+        placeholder="Testing"
+        type="text"
+      />
+       
+      <!---->
+       
+      <!---->
+       
+      <!---->
+    </div>
+     
+    <!---->
+  </div>
+   
+  <button
+    class="button"
+    disabled="disabled"
+    type="button"
+  >
+    <!---->
+     
+    <span>
+      Submit
+    </span>
+     
+    <!---->
+  </button>
+</div>
+`;
