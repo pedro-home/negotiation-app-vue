@@ -18,7 +18,16 @@ The app is based on the idea of a work contract negotiation: Employer and employ
 
 - The `appid` from _Open Weather Map API_ should be private, since it's considered _personal_ data. To ease the process of running this project locally, it has been added directly to the API url. The correct way would be through _NODE_ environments.
 
-## Project setup
+## Usage
+
+To run the project just execute these commands
+
+```
+npm install
+npm start
+```
+
+## Commands
 
 ```
 npm install
@@ -47,3 +56,5 @@ npm run lint
 ```
 npm run test
 ```
+
+You can also use `npm run test:watch` for running unit tests in watch mode
