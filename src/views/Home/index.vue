@@ -49,7 +49,16 @@ export default {
 
       // Fetch temperature from API
       fetchTemperature().then((temperature) => {
-        const message = `Maximum offer was: ${this.valueEmployer}<br>Minimum expected salary was: ${this.valueEmployee}<br>Current temperature: ${temperature} °C`
+        const currencyFormatter = new Intl.NumberFormat(navigator.language, {
+          style: 'currency',
+          currency: 'EUR',
+        })
+        const numberFormatter = new Intl.NumberFormat(navigator.language)
+        const message = `Maximum offer was: ${currencyFormatter.format(
+          this.valueEmployer
+        )}<br>Minimum expected salary was: ${currencyFormatter.format(
+          this.valueEmployee
+        )}<br>Current temperature: ${numberFormatter.format(temperature)} °C`
 
         if (this.valueEmployee <= this.valueEmployer) {
           // Show success dialog
