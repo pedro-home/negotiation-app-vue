@@ -58,7 +58,7 @@ export default {
           this.valueEmployer
         )}<br>Minimum expected salary was: ${currencyFormatter.format(
           this.valueEmployee
-        )}<br>Current temperature: ${numberFormatter.format(temperature)} °C`
+        )}<br>Current temperature: ${numberFormatter.format(temperature)}°C`
 
         if (this.valueEmployee <= this.valueEmployer) {
           // Show success dialog
