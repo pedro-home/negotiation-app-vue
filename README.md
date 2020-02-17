@@ -23,6 +23,7 @@ The app is based on the idea of a work contract negotiation: Employer and employ
 To run the project just execute these commands
 
 ```
+git clone https://github.com/pedro-home/negotiation-app-vue.git
 npm install
 npm start
 ```
