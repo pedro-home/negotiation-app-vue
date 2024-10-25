@@ -15,7 +15,7 @@
   "dependencies": {
     "buefy": "^0.8.10",
     "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@ascendancyy/vue-cli-plugin-stylelint": "^1.1.2",
